@@ -17,7 +17,7 @@ ref = db.reference(
 
 data = {
     "004223": {  # id of student which is a key
-        "id": "004223",
+        "id": "0042233",
         "name": "Samrat Thapa",
         "password": "004223Samrat",
         "dob": "1997-08-02",
