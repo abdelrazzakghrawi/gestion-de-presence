@@ -7,14 +7,12 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
 
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(
-    cred,
-    {
-        "databaseURL": "<paste here>",
-        # database URL
-    },
-)
+cred = credentials.Certificate('C:/Users/MY PC/Desktop/projet_tuto/gestion-de-presence/serviceAccountKey.json')
+firebase_admin.initialize_app(cred,{
+    'databaseURL':"https://gestion-dabsence-default-rtdb.firebaseio.com/",
+    'storageBucket':"gestion-dabsence.appspot.com"
+})
+
 
 # student images
 folderPath = "static/Files/Images"

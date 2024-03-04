@@ -18,14 +18,13 @@ app = Flask(__name__)  # initializing
 
 
 # database credentials
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(
-    cred,
-    {
-        "databaseURL": "<paste here>",
-        "storageBucket": "<paste here>",
-    },
-)
+cred = credentials.Certificate('C:/Users/MY PC/Desktop/projet_tuto/gestion-de-presence/serviceAccountKey.json')
+firebase_admin.initialize_app(cred,{
+    'databaseURL':"https://gestion-dabsence-default-rtdb.firebaseio.com/",
+    'storageBucket':"gestion-dabsence.appspot.com"
+})
+
+
 
 bucket = storage.bucket()
 

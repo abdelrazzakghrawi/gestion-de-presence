@@ -2,14 +2,12 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(
-    cred,
-    {
-        "databaseURL": "<paste here>",
-        # database URL
-    },
-)
+cred = credentials.Certificate('C:/Users/MY PC/Desktop/projet_tuto/gestion-de-presence/serviceAccountKey.json')
+firebase_admin.initialize_app(cred,{
+    'databaseURL':"https://gestion-dabsence-default-rtdb.firebaseio.com/",
+    'storageBucket':"gestion-dabsence.appspot.com"
+})
+
 
 ref = db.reference(
     "Students"
