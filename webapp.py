@@ -411,13 +411,16 @@ def add_image_database():
 
 def findEncodings(images):
     encodeList = []
-
     for img in images:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        encode = face_recognition.face_encodings(img)[0]
-        encodeList.append(encode)
-
+        face_encodings = face_recognition.face_encodings(img)
+        if face_encodings:
+            encodeList.append(face_encodings[0])
+        else:
+            # Gérer le cas où aucun encodage n'est trouvé
+            print("Aucun visage détecté dans l'image.")
     return encodeList
+
 
 
 @app.route("/admin/add_user", methods=["GET", "POST"])
