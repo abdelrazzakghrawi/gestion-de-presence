@@ -31,6 +31,21 @@ data = {
         "content": "This section aims to offer essential guidance for students to successfully complete the course. It will be regularly updated \
                 to ensure its relevance and usefulness. Stay tuned for valuable \
                 insights and tips that will help you excel in your studies.",
+    },"4444": {  # id of student which is a key
+        "id": "4444",
+        "name": "abdo",
+        "password": "abdo",
+        "dob": "1997-08-02",
+        "address": "fes, hakma l3alm",
+        "phone": "2348657951",
+        "email": "abdo@gmail.com",
+        "major": "Data Science",
+        "starting_year": 2020,
+        "standing": "G",
+        "total_attendance": 4,
+        "year": 2,
+        "last_attendance_time": "2023-02-21 12:33:10",
+        "content": "T",
     },
 }
 
